@@ -1,1 +1,151 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Abi Zaizi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;800&family=Newsreader:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#EAF0EE; --surface:#F7FAF9; --ink:#12263A; --muted:#51657A; --line:#C4D2CE; --accent:#14796B; --on-accent:#fff;
+  --display:'Bricolage Grotesque','Segoe UI',Arial,sans-serif;
+  --body:'Newsreader',Georgia,'Times New Roman',serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#0F1B26; --surface:#162534; --ink:#E6EEF2; --muted:#9DB0BF; --line:#2A3C4D; --accent:#4FC3AF; --on-accent:#0F1B26;}
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:1.15rem;line-height:1.65}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.wrap{max-width:960px;margin:0 auto;padding:0 1.5rem}
 
+header.top{display:flex;justify-content:space-between;align-items:center;padding:1.5rem 0}
+.logo{font-family:var(--display);font-weight:800;text-decoration:none;font-size:1.1rem}
+nav a{font-family:var(--display);font-weight:500;font-size:.95rem;text-decoration:none;margin-left:1.4rem;color:var(--muted)}
+nav a:hover{color:var(--accent)}
+
+.hero{padding:5rem 0 4rem}
+.hero .hi{font-style:italic;color:var(--muted);font-size:1.3rem}
+.hero h1{font-family:var(--display);font-weight:800;font-size:clamp(3.4rem,13vw,9rem);line-height:.92;letter-spacing:-.04em;margin:.6rem 0 1.8rem;animation:rise .9s cubic-bezier(.2,.7,.2,1) both}
+.hero h1 span{display:block;color:var(--accent)}
+@keyframes rise{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+.hero p{max-width:34em;font-size:1.3rem}
+.btns{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:2rem}
+.btn{font-family:var(--display);font-weight:500;padding:.8rem 1.4rem;border-radius:999px;text-decoration:none;border:2px solid var(--accent);transition:background .2s,color .2s}
+.btn.primary{background:var(--accent);color:var(--on-accent)}
+.btn:hover{background:var(--ink);border-color:var(--ink);color:var(--bg)}
+
+section{padding:3.5rem 0;border-top:1px solid var(--line)}
+h2{font-family:var(--display);font-weight:800;font-size:2rem;letter-spacing:-.02em;margin-bottom:1.5rem}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem}
+.about p+p{margin-top:1rem}
+.facts{list-style:none;padding:0}
+.facts li{display:flex;justify-content:space-between;gap:1rem;padding:.7rem 0;border-bottom:1px solid var(--line)}
+.facts b{font-family:var(--display);font-weight:500;color:var(--muted)}
+
+.skills{display:flex;flex-wrap:wrap;gap:.6rem}
+.skills li{list-style:none;padding:.4rem 1rem;border:1px solid var(--line);border-radius:999px;background:var(--surface);font-family:var(--display);font-weight:500;font-size:.95rem}
+
+.projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.2rem}
+.project{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:1.5rem;display:flex;flex-direction:column;gap:.6rem}
+.project h3{font-family:var(--display);font-weight:800;font-size:1.25rem}
+.project p{color:var(--muted);font-size:1.05rem}
+.project a{margin-top:auto;font-family:var(--display);font-weight:500;color:var(--accent)}
+
+.contact p{max-width:30em;margin-bottom:1.5rem}
+.contact ul{list-style:none;padding:0;display:flex;gap:1.5rem;flex-wrap:wrap;font-family:var(--display);font-weight:500}
+footer{padding:2rem 0 3rem;color:var(--muted);font-size:.95rem;border-top:1px solid var(--line)}
+
+@media (max-width:700px){
+  .about{grid-template-columns:1fr}
+  nav a{margin-left:.9rem}
+  .hero{padding:3rem 0}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="logo" href="#">Abi Zaizi</a>
+    <nav aria-label="Navigasi utama">
+      <a href="#tentang">Tentang</a>
+      <a href="#proyek">Proyek</a>
+      <a href="#kontak">Kontak</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="hero">
+      <p class="hi">Halo, saya</p>
+      <h1>Abi <span>Zaizi</span></h1>
+      <p>Saya membuat hal-hal yang berguna dan mudah dipakai. Selamat datang di halaman pribadi saya.</p>
+      <div class="btns">
+        <a class="btn primary" href="#proyek">Lihat proyek saya</a>
+        <a class="btn" href="#kontak">Hubungi saya</a>
+      </div>
+    </div>
+
+    <section id="tentang">
+      <h2>Tentang saya</h2>
+      <div class="about">
+        <div>
+          <p>Saya Abi Zaizi, berdomisili di Indonesia. Saya suka belajar hal baru dan mengubah ide menjadi sesuatu yang nyata.</p>
+          <p>Ganti teks ini dengan cerita singkat tentang diri Anda: latar belakang, minat, dan hal yang sedang Anda kerjakan.</p>
+        </div>
+        <ul class="facts">
+          <li><b>Lokasi</b><span>Indonesia</span></li>
+          <li><b>Bidang</b><span>Isi bidang Anda</span></li>
+          <li><b>Status</b><span>Terbuka untuk kolaborasi</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="keahlian">
+      <h2>Keahlian</h2>
+      <ul class="skills">
+        <li>Keahlian 1</li><li>Keahlian 2</li><li>Keahlian 3</li><li>Keahlian 4</li><li>Keahlian 5</li>
+      </ul>
+    </section>
+
+    <section id="proyek">
+      <h2>Proyek</h2>
+      <div class="projects">
+        <article class="project">
+          <h3>Proyek pertama</h3>
+          <p>Jelaskan dalam satu atau dua kalimat apa proyek ini dan masalah apa yang diselesaikannya.</p>
+          <a href="#">Lihat proyek</a>
+        </article>
+        <article class="project">
+          <h3>Proyek kedua</h3>
+          <p>Jelaskan dalam satu atau dua kalimat apa proyek ini dan masalah apa yang diselesaikannya.</p>
+          <a href="#">Lihat proyek</a>
+        </article>
+        <article class="project">
+          <h3>Proyek ketiga</h3>
+          <p>Jelaskan dalam satu atau dua kalimat apa proyek ini dan masalah apa yang diselesaikannya.</p>
+          <a href="#">Lihat proyek</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="kontak" class="contact">
+      <h2>Mari terhubung</h2>
+      <p>Punya pertanyaan atau ingin bekerja sama? Kirim pesan, saya akan membalas secepatnya.</p>
+      <ul>
+        <li><a href="mailto:email@contoh.com">email@contoh.com</a></li>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">LinkedIn</a></li>
+        <li><a href="#">GitHub</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>&copy; <span id="y"></span> Abi Zaizi. Semua hak dilindungi.</footer>
+</div>
+<script>document.getElementById('y').textContent=new Date().getFullYear();</script>
+</body>
+</html>
